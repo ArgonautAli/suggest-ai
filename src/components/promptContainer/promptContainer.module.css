@@ -1,0 +1,89 @@
+@media (min-width: 1150px) {
+
+  
+    .body{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+row-gap: 7vh;
+
+}
+.text{
+    font-weight: 900;
+font-size: 42px;
+line-height: 0px;
+/* identical to box height, or 0% */
+color: #000000;
+}
+
+.btnContainer{
+    display: flex;
+    flex-direction: row;
+    column-gap: 3vw;
+
+}
+
+.inputBar{
+    width: 100%;
+height: 40px;
+
+outline: none;
+padding: 16px;
+background: #FFFFFF;
+border-radius: 36px;
+font-weight: 300;
+font-size: 18px;
+line-height: 0px;
+/* or 0% */
+
+
+color: #000000;
+}
+
+}
+
+@media (max-width: 1150px) {
+    .body{
+        display: flex;
+        justify-content: center;
+align-items: center;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+    .text{
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 0px;
+        /* identical to box height, or 0% */
+        
+        word-wrap: break-word;
+        color: #000000;
+        
+    /* identical to box height, or 0% */
+    color: #000000;
+    
+    }
+
+    .btnContainer{
+        row-gap: 5vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .inputBar{
+    
+    height: 40px;
+    
+    outline: none;
+    padding: 16px;
+    background: #FFFFFF;
+    border-radius: 36px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 0px;
+    /* or 0% */
+    
+    
+    color: #000000;
+    }
+}

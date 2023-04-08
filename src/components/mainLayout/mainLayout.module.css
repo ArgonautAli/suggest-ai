@@ -1,0 +1,23 @@
+@media (min-width: 1150px) {
+    .body{
+padding: 5% 20% 5% 20%;
+
+    }
+    .upperContainer{
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 1150px) {
+    .body{
+padding: 5% 10% 5% 10%;
+
+    }
+    .upperContainer{
+        display: flex;
+        /* justify-content: space-between; */
+    }
+}
+
+
