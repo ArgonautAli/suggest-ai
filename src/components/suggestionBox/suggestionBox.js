@@ -3,6 +3,7 @@ import style from "./suggestionBox.module.css"
 import Link from "next/link"
 
 export default function SuggestionBox({suggImage, suggHeading, suggBio, suggLink}){
+    console.log("img", suggImage)
     return(
         <>
         <div className={style.suggestContainer}>

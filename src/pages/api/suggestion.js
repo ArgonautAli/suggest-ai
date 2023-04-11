@@ -12,7 +12,7 @@ export default async (req, res) => {
             console.log("here")
             const completion = await openai.createCompletion({
               model: "text-davinci-003",
-              prompt: `suggest a ${req.body.format} related to ${req.body.prompt} with link to image from wikipedia between "^^" and name between "^^" & synopsis between "^^" & a link where to watch between "^^"` ,
+              prompt: `suggest a ${req.body.format} related to ${req.body.prompt} in js array with only values inside double inverted-commas, 0th element is image from wikipedia, 1st element is the heading, then bio, then link to it` ,
               temperature: 0.9,
               max_tokens: 2000,
               top_p: 1,

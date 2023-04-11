@@ -43,17 +43,25 @@ export default function Main(){
         const data = await response.json();
         setIsLoading(false);
         console.log("data", data.text);
-        console.log("split", data.text.split("^^"))
-        const promptArray = data.text.split("^^")
+        console.log("data.text type", typeof(data.text));
+
+        console.log("split", data.text.split('"'))
+        const promptArray = data.text.split('"');
+        console.log("prompt array", promptArray)
         setSuggResponse(promptArray)
         setSuggImage(promptArray[1])
-        setSuggHeading(promptArray[2])
-        setSuggBio(promptArray[3])
-        setSuggLink(promptArray[4])
+        console.log("sugg resp[0]", promptArray[3])
+        setSuggHeading(promptArray[3])
+        setSuggBio(promptArray[5])
+        setSuggLink(promptArray[7])
        
       };
 
-      console.log("sugg img", suggImage)
+      console.log("sugg resp", suggResponse)
+    
+      console.log("sugg img out", suggImage)
+
+
     return(
         <>
         <div className={style.body}>

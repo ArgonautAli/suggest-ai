@@ -4,6 +4,7 @@ import Image from "next/image"
 
 
 export default function MobileSuggestionBox({suggImage, suggHeading, suggBio, suggLink}){
+    console.log("img", suggImage)
     return(
         <>
         <div className={style.suggestContainerMobile}>
