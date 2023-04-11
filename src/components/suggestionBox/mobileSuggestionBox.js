@@ -1,20 +1,27 @@
 import style from "./suggestionBox.module.css"
+import Link from "next/link"
+import Image from "next/image"
 
-export default function MobileSuggestionBox(){
+
+export default function MobileSuggestionBox({suggImage, suggHeading, suggBio, suggLink}){
     return(
         <>
         <div className={style.suggestContainerMobile}>
             <div className={style.mobileUpperContainer}>
-                <div className={style.imgContainerMobile}>Img</div>
-                <span className={style.headingMobile}>The Authority</span>
+                {/* <div className={style.imgContainerMobile}>Img</div> */}
+                {suggImage &&   <Image src={suggImage} height={250} width={200} className={style.imgContainerMobile} alt="Poster"/>}
+              
+                <span className={style.headingMobile}>{suggHeading}</span>
             </div>
            
             <div className={style.textContainerMobile}>
 
                 <span className={style.bodyMobile}>
-                The Star Wars Trilogy Special Edition was a theatrical anniversary edition of the original trilogy, in order to celebrate the 20th anniversary of the release of Star Wars: Episode IV A New Hope.
-                </span>
-                <span className={style.linkMobile}>link</span>
+                {suggBio}                </span>
+                {suggLink && <span className={style.linkMobile}><Link href={suggLink?.split(":")[1]} target="_blank">
+                    {suggLink}
+                    </Link></span>}
+                
             </div>
         </div>
        

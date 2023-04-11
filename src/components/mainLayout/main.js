@@ -11,11 +11,19 @@ export default function Main(){
     const [isLoading, setIsLoading] = useState(false);
     const [promptBody, setPromptBody] = useState("");
     const [buttonSelected, setButtonSelected] = useState("Movie")
+    const [suggImage, setSuggImage] = useState("")
+    const [suggHeading, setSuggHeading] = useState("")
+    const [suggBio, setSuggBio] = useState("")
+    const [suggLink, setSuggLink] = useState("")
+    const [calledApi, setCalledApi] = useState(false)
+    const [suggResponse, setSuggResponse] = useState()
+
+
 
     // console.log("btn", buttonSelected)
-    console.log("process.env.OPENAI_API_KEY", process.env.OPEN_API_KEY)
 
     async function promptHandler(){
+      setCalledApi(true)
         console.log("prompt handler called", promptBody);
         const resp = await getResponseFromOpenAI();
         console.log("resp", resp) 
@@ -35,8 +43,17 @@ export default function Main(){
         const data = await response.json();
         setIsLoading(false);
         console.log("data", data.text);
+        console.log("split", data.text.split("^^"))
+        const promptArray = data.text.split("^^")
+        setSuggResponse(promptArray)
+        setSuggImage(promptArray[1])
+        setSuggHeading(promptArray[2])
+        setSuggBio(promptArray[3])
+        setSuggLink(promptArray[4])
        
       };
+
+      console.log("sugg img", suggImage)
     return(
         <>
         <div className={style.body}>
@@ -52,10 +69,15 @@ export default function Main(){
         
         </div>
         <div>
+          {calledApi? <>
             {isLoading? <><LoadingSuggestionBox /></>: <>
-            <SuggestionBox />
-            <MobileSuggestionBox />
+            {suggResponse?.length? <>
+              <SuggestionBox suggImage={suggImage} suggHeading={suggHeading} suggBio={suggBio} suggLink={suggLink} />
+            <MobileSuggestionBox suggImage={suggImage} suggHeading={suggHeading} suggBio={suggBio} suggLink={suggLink}/> </>: null}
+           
             </>}
+          </>: null}
+            
           
         </div>
         {/* <div>

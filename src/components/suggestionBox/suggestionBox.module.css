@@ -9,12 +9,14 @@
 border-radius: 69px;
 height: 300px;
 padding: 2% 5% 2% 5%;
+margin-top: 20px;
     }
 
     .imgContainer{
         height: 100%;
         width: 200px;
-        background-color: blueviolet;
+        background: url(https://tenor.com/en-GB/view/404-404error-houston-yk-gif-26008259);
+        /* background-color: blueviolet; */
     }
 
     .textContainer{
@@ -30,7 +32,7 @@ padding: 2% 5% 2% 5%;
 
         font-weight: 700;
 font-size: 42px;
-line-height: 0px;
+line-height: 36px;
 /* or 0% */
 
 
@@ -91,7 +93,9 @@ color: #1A98FF;
     .imgContainerMobile{
         /* height: 100%; */
         width: 150px;
-        background-color: blueviolet;
+        background: url(https://tenor.com/en-GB/view/404-404error-houston-yk-gif-26008259);
+
+        /* background-color: blueviolet; */
     }
 
     .headingMobile{
@@ -101,7 +105,7 @@ color: #1A98FF;
 
         font-weight: 700;
 font-size: 42px;
-line-height: 0px;
+line-height: 24px;
 color: #000000;
     }
 
