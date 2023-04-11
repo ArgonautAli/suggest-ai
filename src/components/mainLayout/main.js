@@ -6,6 +6,7 @@ import Image from "next/image"
 import LoadingSuggestionBox from "../suggestionBox/loadingSuggestion"
 import MobileSuggestionBox from "../suggestionBox/mobileSuggestionBox"
 import { useState } from "react"
+// import { Head } from 'next/head';
 
 export default function Main(){
     const [isLoading, setIsLoading] = useState(false);
@@ -64,6 +65,10 @@ export default function Main(){
 
     return(
         <>
+           {/* <Head>
+  <title>Suggest AI app</title>
+  <link rel="icon" href="/favicon.ico" />
+  </Head> */}
         <div className={style.body}>
         <div className={style.upperContainer}>
         <PromptContainer 
