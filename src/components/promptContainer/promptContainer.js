@@ -20,7 +20,7 @@ export default function PromptContainer({promptBody, setPromptBody, onSubmit, bu
             }/>
 
         </div>
-        <div className={style.text}>that feels like</div>
+        <div className={style.text}>that has</div>
         <div className="w-full flex justify-center">
             <input className={style.inputBar} placeholder="wholesome, happy ending and women in armour" value={promptBody} onChange={(e)=>setPromptBody(e.target.value)} onKeyDown={(e)=>promptCaller(e)}/>
         </div>
